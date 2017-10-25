@@ -1,8 +1,8 @@
 body {
-  background: #000021;
+  background: #0083ca;
   font-family: 'Lato', sans-serif;
   font-size: 24px;
-  color: #ac862d;
+  color: #0083ca;
   letter-spacing: -0.2px;
 }
 .main {
@@ -131,7 +131,7 @@ padding: 0px;
 .main .other-pages .center-product .close-page i,
 .main .products-only .center-page .close-page i,
 .main .other-pages .center-page .close-page i {
-  color: #ac862d;
+  color: #0083ca;
 }
 .main .products-only .center-product .product-image,
 .main .other-pages .center-product .product-image,
@@ -212,7 +212,7 @@ padding: 0px;
 .main .products-only .center-page .text .product-style-band,
 .main .other-pages .center-page .text .product-style-band {
   height: 75px;
-  background-color: #000021;
+  background-color: #0083ca;
   margin-bottom: 10px;
   overflow: hidden;
 }
@@ -251,7 +251,7 @@ padding: 0px;
 .main .other-pages .center-page .text p {
   font-weight: 400;
   font-size: 14px;
-  color: #000021;
+  color: #0083ca;
 }
 .main .products-only .center-product .product-text p a,
 .main .other-pages .center-product .product-text p a,
@@ -262,7 +262,7 @@ padding: 0px;
 .main .products-only .center-page .text p a,
 .main .other-pages .center-page .text p a {
   display: inline;
-  color: #000021;
+  color: #0083ca;
   border: none;
   padding: 0px;
   margin: 0px;
@@ -324,7 +324,7 @@ padding: 0px;
   background: none;
   position: relative;
   bottom: 3px;
-  color: #ac862d;
+  color: #0083ca;
   font-weight: 200;
   background: none;
   font-size: 16px;
@@ -362,7 +362,7 @@ padding: 0px;
   text-align: right;
   padding-bottom: 0px;
   margin-bottom: 2px;
-  color: #ac862d;
+  color: #0083ca;
   transition: 0.3s color;
 }
 .main .products-only .center-product .product-text .button-wrapper button:hover,
@@ -433,7 +433,7 @@ padding: 0px;
 .main .other-pages .center-product .text .button-wrapper button:visited h3,
 .main .products-only .center-page .text .button-wrapper button:visited h3,
 .main .other-pages .center-page .text .button-wrapper button:visited h3 {
-  color: #000021;
+  color: #0083ca;
   transition: 0.3s color;
 }
 .main .products-only .center-product .product-text .button-wrapper button:hover i,
@@ -469,7 +469,7 @@ padding: 0px;
 .main .products-only .center-page .text .button-wrapper button:visited i,
 .main .other-pages .center-page .text .button-wrapper button:visited i {
   opacity: 1;
-  color: #ac862d;
+  color: #0083ca;
   transition: 0.3s opacity;
 }
 .main .products-only .center-product .row,
@@ -550,7 +550,7 @@ padding: 0px;
 .main .products-only .center-page .row .text a,
 .main .other-pages .center-page .row .text a {
   display: inline;
-  color: #000021;
+  color: #0083ca;
   border: none;
   padding: 0px;
   margin: 0px;
@@ -585,16 +585,16 @@ padding: 0px;
   padding-right: 10px;
 }
 .product-form button {
-  color: #ac862d;
-  background-color: #000021;
+  color: #0083ca;
+  background-color: #0083ca;
   outline: none;
   border: none;
 }
 .product-form button:hover,
 .product-form button:focus,
 .product-form button:active {
-  color: #000021;
-  background-color: #ac862d;
+  color: #0083ca;
+  background-color: #0083ca;
   outline: none;
 }
 .pages {
@@ -647,7 +647,7 @@ padding: 0px;
   text-transform: uppercase;
   font-weight: 300;
   padding-bottom: 15px;
-  border-bottom: 1px solid #ac862d;
+  border-bottom: 1px solid #00e0d5;
   font-size: 20px;
 }
 .pages .sitemap .all-wrapper .products ul {
@@ -661,12 +661,12 @@ padding: 0px;
   transition: 0.3s color ease-in-out;
 }
 .pages .sitemap .all-wrapper .products ul li:hover {
-  color: #000021;
+  color: #0083ca;
 }
 .pages .sitemap .boring-page {
   height: 100vh;
   width: 100vw;
-  background-color: #ac862d;
+  background-color: #0083ca;
 }
 .pages .show-them {
   top: 0vh;
