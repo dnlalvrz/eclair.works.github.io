@@ -1,0 +1,833 @@
+body {
+  background: #000021;
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  color: #ac862d;
+  letter-spacing: -0.2px;
+}
+.main {
+  padding: 0px;
+  overflow: auto;
+}
+.main #photo {
+  margin: 0px;
+}
+.main #photo div {
+  background-image: url("https://s3.ca-central-1.amazonaws.com/nttld.ltd/cdn/images/8.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  padding: 0px;
+}
+.main #photo div .photogcredit {
+  color: #ac862d;
+  height: 100px;
+  font-size: 12px;
+  padding-top: 8px;
+  padding-left: 21px;
+  opacity: 0.4;
+  background: none;
+  transition: opacity 0.5s ease-in-out;
+}
+.main #photo div .photogcredit:hover {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.main #photo div .photogcredit a {
+  color: #ac862d;
+}
+.main #photo div img {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  opacity: 0;
+  width: 500px;
+  transition: opacity 0.5s ease-in-out;
+}
+.main #photo div img:hover {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.main #photo div i {
+  position: absolute;
+  bottom: 80px;
+  left: 35px;
+  opacity: 0.2;
+  transition: opacity 0.3s;
+}
+.main #photo div i:hover {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.main .products-only,
+.main .other-pages {
+  background-image: none;
+}
+.imageCycle1{
+background:url(../bgimages/1.png) no-repeat center center fixed;
+width: 100vw;
+height: 100vh;
+background-size: cover;
+padding: 0px;
+}
+.imageCycle2{
+background:url(../bgimages/2.png) no-repeat center center fixed;
+width: 100vw;
+height: 100vh;
+background-size: cover;
+padding: 0px;
+}
+.imageCycle3{
+background:url(../bgimages/3.png) no-repeat center center fixed;
+width: 100vw;
+height: 100vh;
+background-size: cover;
+padding: 0px;
+}
+.imageCycle4{
+background:url(../bgimages/4.png) no-repeat center center fixed;
+width: 100vw;
+height: 100vh;
+background-size: cover;
+padding: 0px;
+}
+.main .products-only background-color,
+.main .other-pages background-color,
+.main .products-only .center-product,
+.main .other-pages .center-product,
+.main .products-only .center-page,
+.main .other-pages .center-page {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: rgba(254,254,254,0.92);
+  z-index: 10;
+  overflow: scroll;
+  transition: 0.6s top ease-in-out, 0.3s opacity linear;
+}
+.main .products-only .center-product .close-product,
+.main .other-pages .center-product .close-product,
+.main .products-only .center-page .close-product,
+.main .other-pages .center-page .close-product,
+.main .products-only .center-product .close-page,
+.main .other-pages .center-product .close-page,
+.main .products-only .center-page .close-page,
+.main .other-pages .center-page .close-page {
+  display: block;
+  position: absolute;
+  width: 30px;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+}
+.main .products-only .center-product .close-product i,
+.main .other-pages .center-product .close-product i,
+.main .products-only .center-page .close-product i,
+.main .other-pages .center-page .close-product i,
+.main .products-only .center-product .close-page i,
+.main .other-pages .center-product .close-page i,
+.main .products-only .center-page .close-page i,
+.main .other-pages .center-page .close-page i {
+  color: #ac862d;
+}
+.main .products-only .center-product .product-image,
+.main .other-pages .center-product .product-image,
+.main .products-only .center-page .product-image,
+.main .other-pages .center-page .product-image {
+  width: 100%;
+  height: 80vh;
+  margin-top: 35px;
+  padding-left: 35px;
+  object-fit: cover;
+}
+.main .products-only .center-product .product-image .product-image-main,
+.main .other-pages .center-product .product-image .product-image-main,
+.main .products-only .center-page .product-image .product-image-main,
+.main .other-pages .center-page .product-image .product-image-main {
+  position: relative;
+}
+.main .products-only .center-product .product-image .product-image-main img,
+.main .other-pages .center-product .product-image .product-image-main img,
+.main .products-only .center-page .product-image .product-image-main img,
+.main .other-pages .center-page .product-image .product-image-main img {
+  width: 100%;
+}
+.main .products-only .center-product .product-image .product-thumbnail,
+.main .other-pages .center-product .product-image .product-thumbnail,
+.main .products-only .center-page .product-image .product-thumbnail,
+.main .other-pages .center-page .product-image .product-thumbnail {
+  position: right;
+  margin-top: 10px;
+  height: 10vh;
+  overflow: hidden;
+}
+.main .products-only .center-product .product-image .product-thumbnail img,
+.main .other-pages .center-product .product-image .product-thumbnail img,
+.main .products-only .center-page .product-image .product-thumbnail img,
+.main .other-pages .center-page .product-image .product-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.main .products-only .center-product .product-image .thumb1 img,
+.main .other-pages .center-product .product-image .thumb1 img,
+.main .products-only .center-page .product-image .thumb1 img,
+.main .other-pages .center-page .product-image .thumb1 img {
+  object-fit: none;
+  object-position: 49% 40%;
+}
+.main .products-only .center-product .product-image .thumb2 img,
+.main .other-pages .center-product .product-image .thumb2 img,
+.main .products-only .center-page .product-image .thumb2 img,
+.main .other-pages .center-page .product-image .thumb2 img {
+  object-fit: none;
+  object-position: 66% 57%;
+}
+.main .products-only .center-product .product-image .thumb3 img,
+.main .other-pages .center-product .product-image .thumb3 img,
+.main .products-only .center-page .product-image .thumb3 img,
+.main .other-pages .center-page .product-image .thumb3 img {
+  object-fit: none;
+  object-position: 27% 18%;
+}
+.main .products-only .center-product .product-text,
+.main .other-pages .center-product .product-text,
+.main .products-only .center-page .product-text,
+.main .other-pages .center-page .product-text,
+.main .products-only .center-product .text,
+.main .other-pages .center-product .text,
+.main .products-only .center-page .text,
+.main .other-pages .center-page .text {
+  margin-top: 35px;
+  padding-right: 40px;
+}
+.main .products-only .center-product .product-text .product-style-band,
+.main .other-pages .center-product .product-text .product-style-band,
+.main .products-only .center-page .product-text .product-style-band,
+.main .other-pages .center-page .product-text .product-style-band,
+.main .products-only .center-product .text .product-style-band,
+.main .other-pages .center-product .text .product-style-band,
+.main .products-only .center-page .text .product-style-band,
+.main .other-pages .center-page .text .product-style-band {
+  height: 75px;
+  background-color: #000021;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.main .products-only .center-product .product-text .product-style-band img,
+.main .other-pages .center-product .product-text .product-style-band img,
+.main .products-only .center-page .product-text .product-style-band img,
+.main .other-pages .center-page .product-text .product-style-band img,
+.main .products-only .center-product .text .product-style-band img,
+.main .other-pages .center-product .text .product-style-band img,
+.main .products-only .center-page .text .product-style-band img,
+.main .other-pages .center-page .text .product-style-band img {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  object-position: 50% 25%;
+}
+.main .products-only .center-product .product-text h2,
+.main .other-pages .center-product .product-text h2,
+.main .products-only .center-page .product-text h2,
+.main .other-pages .center-page .product-text h2,
+.main .products-only .center-product .text h2,
+.main .other-pages .center-product .text h2,
+.main .products-only .center-page .text h2,
+.main .other-pages .center-page .text h2 {
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.main .products-only .center-product .product-text p,
+.main .other-pages .center-product .product-text p,
+.main .products-only .center-page .product-text p,
+.main .other-pages .center-page .product-text p,
+.main .products-only .center-product .text p,
+.main .other-pages .center-product .text p,
+.main .products-only .center-page .text p,
+.main .other-pages .center-page .text p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000021;
+}
+.main .products-only .center-product .product-text p a,
+.main .other-pages .center-product .product-text p a,
+.main .products-only .center-page .product-text p a,
+.main .other-pages .center-page .product-text p a,
+.main .products-only .center-product .text p a,
+.main .other-pages .center-product .text p a,
+.main .products-only .center-page .text p a,
+.main .other-pages .center-page .text p a {
+  display: inline;
+  color: #000021;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+.main .products-only .center-product .product-text h3,
+.main .other-pages .center-product .product-text h3,
+.main .products-only .center-page .product-text h3,
+.main .other-pages .center-page .product-text h3,
+.main .products-only .center-product .text h3,
+.main .other-pages .center-product .text h3,
+.main .products-only .center-page .text h3,
+.main .other-pages .center-page .text h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+.main .products-only .center-product .product-text ul,
+.main .other-pages .center-product .product-text ul,
+.main .products-only .center-page .product-text ul,
+.main .other-pages .center-page .product-text ul,
+.main .products-only .center-product .text ul,
+.main .other-pages .center-product .text ul,
+.main .products-only .center-page .text ul,
+.main .other-pages .center-page .text ul {
+  padding-left: 20px;
+}
+.main .products-only .center-product .product-text ul li,
+.main .other-pages .center-product .product-text ul li,
+.main .products-only .center-page .product-text ul li,
+.main .other-pages .center-page .product-text ul li,
+.main .products-only .center-product .text ul li,
+.main .other-pages .center-product .text ul li,
+.main .products-only .center-page .text ul li,
+.main .other-pages .center-page .text ul li {
+  font-size: 14px;
+}
+.main .products-only .center-product .product-text .button-wrapper,
+.main .other-pages .center-product .product-text .button-wrapper,
+.main .products-only .center-page .product-text .button-wrapper,
+.main .other-pages .center-page .product-text .button-wrapper,
+.main .products-only .center-product .text .button-wrapper,
+.main .other-pages .center-product .text .button-wrapper,
+.main .products-only .center-page .text .button-wrapper,
+.main .other-pages .center-page .text .button-wrapper {
+  position: absolute;
+  bottom: 0px;
+  right: 35px;
+}
+.main .products-only .center-product .product-text .button-wrapper button,
+.main .other-pages .center-product .product-text .button-wrapper button,
+.main .products-only .center-page .product-text .button-wrapper button,
+.main .other-pages .center-page .product-text .button-wrapper button,
+.main .products-only .center-product .text .button-wrapper button,
+.main .other-pages .center-product .text .button-wrapper button,
+.main .products-only .center-page .text .button-wrapper button,
+.main .other-pages .center-page .text .button-wrapper button {
+  width: 100%;
+  text-align: right;
+  border: none;
+  background: none;
+  position: relative;
+  bottom: 3px;
+  color: #ac862d;
+  font-weight: 200;
+  background: none;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding-left: 3px;
+  padding-bottom: 5px;
+  padding-right: 0px;
+  padding-top: 3px;
+  font-family: 'Lato', sans-serif;
+}
+.main .products-only .center-product .product-text .button-wrapper button i,
+.main .other-pages .center-product .product-text .button-wrapper button i,
+.main .products-only .center-page .product-text .button-wrapper button i,
+.main .other-pages .center-page .product-text .button-wrapper button i,
+.main .products-only .center-product .text .button-wrapper button i,
+.main .other-pages .center-product .text .button-wrapper button i,
+.main .products-only .center-page .text .button-wrapper button i,
+.main .other-pages .center-page .text .button-wrapper button i {
+  display: inline;
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+.main .products-only .center-product .product-text .button-wrapper button h3,
+.main .other-pages .center-product .product-text .button-wrapper button h3,
+.main .products-only .center-page .product-text .button-wrapper button h3,
+.main .other-pages .center-page .product-text .button-wrapper button h3,
+.main .products-only .center-product .text .button-wrapper button h3,
+.main .other-pages .center-product .text .button-wrapper button h3,
+.main .products-only .center-page .text .button-wrapper button h3,
+.main .other-pages .center-page .text .button-wrapper button h3 {
+  display: inline;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: right;
+  padding-bottom: 0px;
+  margin-bottom: 2px;
+  color: #ac862d;
+  transition: 0.3s color;
+}
+.main .products-only .center-product .product-text .button-wrapper button:hover,
+.main .other-pages .center-product .product-text .button-wrapper button:hover,
+.main .products-only .center-page .product-text .button-wrapper button:hover,
+.main .other-pages .center-page .product-text .button-wrapper button:hover,
+.main .products-only .center-product .text .button-wrapper button:hover,
+.main .other-pages .center-product .text .button-wrapper button:hover,
+.main .products-only .center-page .text .button-wrapper button:hover,
+.main .other-pages .center-page .text .button-wrapper button:hover,
+.main .products-only .center-product .product-text .button-wrapper button:focus,
+.main .other-pages .center-product .product-text .button-wrapper button:focus,
+.main .products-only .center-page .product-text .button-wrapper button:focus,
+.main .other-pages .center-page .product-text .button-wrapper button:focus,
+.main .products-only .center-product .text .button-wrapper button:focus,
+.main .other-pages .center-product .text .button-wrapper button:focus,
+.main .products-only .center-page .text .button-wrapper button:focus,
+.main .other-pages .center-page .text .button-wrapper button:focus,
+.main .products-only .center-product .product-text .button-wrapper button:active,
+.main .other-pages .center-product .product-text .button-wrapper button:active,
+.main .products-only .center-page .product-text .button-wrapper button:active,
+.main .other-pages .center-page .product-text .button-wrapper button:active,
+.main .products-only .center-product .text .button-wrapper button:active,
+.main .other-pages .center-product .text .button-wrapper button:active,
+.main .products-only .center-page .text .button-wrapper button:active,
+.main .other-pages .center-page .text .button-wrapper button:active,
+.main .products-only .center-product .product-text .button-wrapper button:visited,
+.main .other-pages .center-product .product-text .button-wrapper button:visited,
+.main .products-only .center-page .product-text .button-wrapper button:visited,
+.main .other-pages .center-page .product-text .button-wrapper button:visited,
+.main .products-only .center-product .text .button-wrapper button:visited,
+.main .other-pages .center-product .text .button-wrapper button:visited,
+.main .products-only .center-page .text .button-wrapper button:visited,
+.main .other-pages .center-page .text .button-wrapper button:visited {
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+.main .products-only .center-product .product-text .button-wrapper button:hover h3,
+.main .other-pages .center-product .product-text .button-wrapper button:hover h3,
+.main .products-only .center-page .product-text .button-wrapper button:hover h3,
+.main .other-pages .center-page .product-text .button-wrapper button:hover h3,
+.main .products-only .center-product .text .button-wrapper button:hover h3,
+.main .other-pages .center-product .text .button-wrapper button:hover h3,
+.main .products-only .center-page .text .button-wrapper button:hover h3,
+.main .other-pages .center-page .text .button-wrapper button:hover h3,
+.main .products-only .center-product .product-text .button-wrapper button:focus h3,
+.main .other-pages .center-product .product-text .button-wrapper button:focus h3,
+.main .products-only .center-page .product-text .button-wrapper button:focus h3,
+.main .other-pages .center-page .product-text .button-wrapper button:focus h3,
+.main .products-only .center-product .text .button-wrapper button:focus h3,
+.main .other-pages .center-product .text .button-wrapper button:focus h3,
+.main .products-only .center-page .text .button-wrapper button:focus h3,
+.main .other-pages .center-page .text .button-wrapper button:focus h3,
+.main .products-only .center-product .product-text .button-wrapper button:active h3,
+.main .other-pages .center-product .product-text .button-wrapper button:active h3,
+.main .products-only .center-page .product-text .button-wrapper button:active h3,
+.main .other-pages .center-page .product-text .button-wrapper button:active h3,
+.main .products-only .center-product .text .button-wrapper button:active h3,
+.main .other-pages .center-product .text .button-wrapper button:active h3,
+.main .products-only .center-page .text .button-wrapper button:active h3,
+.main .other-pages .center-page .text .button-wrapper button:active h3,
+.main .products-only .center-product .product-text .button-wrapper button:visited h3,
+.main .other-pages .center-product .product-text .button-wrapper button:visited h3,
+.main .products-only .center-page .product-text .button-wrapper button:visited h3,
+.main .other-pages .center-page .product-text .button-wrapper button:visited h3,
+.main .products-only .center-product .text .button-wrapper button:visited h3,
+.main .other-pages .center-product .text .button-wrapper button:visited h3,
+.main .products-only .center-page .text .button-wrapper button:visited h3,
+.main .other-pages .center-page .text .button-wrapper button:visited h3 {
+  color: #000021;
+  transition: 0.3s color;
+}
+.main .products-only .center-product .product-text .button-wrapper button:hover i,
+.main .other-pages .center-product .product-text .button-wrapper button:hover i,
+.main .products-only .center-page .product-text .button-wrapper button:hover i,
+.main .other-pages .center-page .product-text .button-wrapper button:hover i,
+.main .products-only .center-product .text .button-wrapper button:hover i,
+.main .other-pages .center-product .text .button-wrapper button:hover i,
+.main .products-only .center-page .text .button-wrapper button:hover i,
+.main .other-pages .center-page .text .button-wrapper button:hover i,
+.main .products-only .center-product .product-text .button-wrapper button:focus i,
+.main .other-pages .center-product .product-text .button-wrapper button:focus i,
+.main .products-only .center-page .product-text .button-wrapper button:focus i,
+.main .other-pages .center-page .product-text .button-wrapper button:focus i,
+.main .products-only .center-product .text .button-wrapper button:focus i,
+.main .other-pages .center-product .text .button-wrapper button:focus i,
+.main .products-only .center-page .text .button-wrapper button:focus i,
+.main .other-pages .center-page .text .button-wrapper button:focus i,
+.main .products-only .center-product .product-text .button-wrapper button:active i,
+.main .other-pages .center-product .product-text .button-wrapper button:active i,
+.main .products-only .center-page .product-text .button-wrapper button:active i,
+.main .other-pages .center-page .product-text .button-wrapper button:active i,
+.main .products-only .center-product .text .button-wrapper button:active i,
+.main .other-pages .center-product .text .button-wrapper button:active i,
+.main .products-only .center-page .text .button-wrapper button:active i,
+.main .other-pages .center-page .text .button-wrapper button:active i,
+.main .products-only .center-product .product-text .button-wrapper button:visited i,
+.main .other-pages .center-product .product-text .button-wrapper button:visited i,
+.main .products-only .center-page .product-text .button-wrapper button:visited i,
+.main .other-pages .center-page .product-text .button-wrapper button:visited i,
+.main .products-only .center-product .text .button-wrapper button:visited i,
+.main .other-pages .center-product .text .button-wrapper button:visited i,
+.main .products-only .center-page .text .button-wrapper button:visited i,
+.main .other-pages .center-page .text .button-wrapper button:visited i {
+  opacity: 1;
+  color: #ac862d;
+  transition: 0.3s opacity;
+}
+.main .products-only .center-product .row,
+.main .other-pages .center-product .row,
+.main .products-only .center-page .row,
+.main .other-pages .center-page .row {
+  margin-right: 0px;
+}
+.main .products-only .center-product .row .text,
+.main .other-pages .center-product .row .text,
+.main .products-only .center-page .row .text,
+.main .other-pages .center-page .row .text {
+  padding-left: 50px;
+  margin-top: 75px;
+  padding-bottom: 80px;
+}
+.main .products-only .center-product .row .text .text-header,
+.main .other-pages .center-product .row .text .text-header,
+.main .products-only .center-page .row .text .text-header,
+.main .other-pages .center-page .row .text .text-header {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.main .products-only .center-product .row .text .text-header img,
+.main .other-pages .center-product .row .text .text-header img,
+.main .products-only .center-page .row .text .text-header img,
+.main .other-pages .center-page .row .text .text-header img {
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+  object-position: 50% 50%;
+}
+.main .products-only .center-product .row .text .text-footer,
+.main .other-pages .center-product .row .text .text-footer,
+.main .products-only .center-page .row .text .text-footer,
+.main .other-pages .center-page .row .text .text-footer {
+  height: 100px;
+  width: 100%;
+  margin-top: 50px;
+}
+.main .products-only .center-product .row .text .text-footer img,
+.main .other-pages .center-product .row .text .text-footer img,
+.main .products-only .center-page .row .text .text-footer img,
+.main .other-pages .center-page .row .text .text-footer img {
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+  object-position: 90% 70%;
+}
+.main .products-only .center-product .row .text h2,
+.main .other-pages .center-product .row .text h2,
+.main .products-only .center-page .row .text h2,
+.main .other-pages .center-page .row .text h2 {
+  margin-bottom: 40px;
+}
+.main .products-only .center-product .row .text ol,
+.main .other-pages .center-product .row .text ol,
+.main .products-only .center-page .row .text ol,
+.main .other-pages .center-page .row .text ol {
+  font-size: 18px;
+  font-weight: 200;
+}
+.main .products-only .center-product .row .text ol li,
+.main .other-pages .center-product .row .text ol li,
+.main .products-only .center-page .row .text ol li,
+.main .other-pages .center-page .row .text ol li {
+  margin-bottom: 20px;
+}
+.main .products-only .center-product .row .text ol :last-child,
+.main .other-pages .center-product .row .text ol :last-child,
+.main .products-only .center-page .row .text ol :last-child,
+.main .other-pages .center-page .row .text ol :last-child {
+  margin-bottom: 0px;
+}
+.main .products-only .center-product .row .text a,
+.main .other-pages .center-product .row .text a,
+.main .products-only .center-page .row .text a,
+.main .other-pages .center-page .row .text a {
+  display: inline;
+  color: #000021;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
+.main .products-only .center-product .row .text h3,
+.main .other-pages .center-product .row .text h3,
+.main .products-only .center-page .row .text h3,
+.main .other-pages .center-page .row .text h3 {
+  margin-bottom: 20px;
+  font-weight: 200;
+}
+.main .products-only .center-product .row .text .sizing,
+.main .other-pages .center-product .row .text .sizing,
+.main .products-only .center-page .row .text .sizing,
+.main .other-pages .center-page .row .text .sizing {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.main .products-only .center-in,
+.main .other-pages .center-in {
+  top: 0vh;
+  opacity: 1;
+  transition: 0.6s top ease-in-out, 0.3s opacity linear;
+}
+.product-form {
+  margin-top: 20px;
+  font-size: 18px;
+  float: right;
+  font-weight: 200;
+}
+.product-form label {
+  padding-right: 10px;
+}
+.product-form button {
+  color: #ac862d;
+  background-color: #000021;
+  outline: none;
+  border: none;
+}
+.product-form button:hover,
+.product-form button:focus,
+.product-form button:active {
+  color: #000021;
+  background-color: #ac862d;
+  outline: none;
+}
+.pages {
+  z-index: 5;
+}
+.pages .logo {
+  display: inline-block;
+  padding-top: 0px;
+  width: 140px;
+  margin-left: 10px;
+}
+.pages .logo img {
+  height: 70px;
+  opacity: 0.9;
+}
+.pages .sitemap {
+  position: fixed;
+  opacity: 0;
+  top: 100vh;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  transition: 1.5s top ease-in-out, 1.5s opacity ease-in-out;
+}
+.pages .sitemap .all-wrapper {
+  height: 90vh;
+  overflow-y: auto;
+}
+.pages .sitemap .all-wrapper .close-sitemap {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.pages .sitemap .all-wrapper .logo {
+  padding-right: 0px;
+  padding-left: 35px;
+  padding-top: 35px;
+  margin-right: 0px;
+}
+.pages .sitemap .all-wrapper .logo div {
+  padding: 0px;
+}
+.pages .sitemap .all-wrapper .products {
+  padding: 35px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.pages .sitemap .all-wrapper .products h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ac862d;
+  font-size: 20px;
+}
+.pages .sitemap .all-wrapper .products ul {
+  padding-left: 0px;
+}
+.pages .sitemap .all-wrapper .products ul li {
+  list-style: none;
+  font-weight: 300;
+  font-size: 16px;
+  transition: 0.3s color ease-in-out;
+  transition: 0.3s color ease-in-out;
+}
+.pages .sitemap .all-wrapper .products ul li:hover {
+  color: #000021;
+}
+.pages .sitemap .boring-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ac862d;
+}
+.pages .show-them {
+  top: 0vh;
+  opacity: 0.95;
+  transition: 1.5s top ease-in-out, 1.5s opacity ease-in-out;
+}
+footer {
+  border-top: 1px solid #A5A5A5;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  z-index: 20;
+  transition: 1.5s top ease-in-out, 1.5s opacity ease-in-out;
+  background-color: rgba(0,0,0,0);
+}
+.sitemap {
+  background-color: none;
+  border-top: none;
+  transition: 1.5s;
+}
+.logo {
+  display: inline-block;
+  padding-top: 0px;
+  width: 140px;
+  margin-left: 10px;
+}
+.logo img {
+  height: 70px;
+  opacity: 0.9;
+}
+.sitemap-button {
+  position: absolute;
+  top: 0px;
+  right: 50px;
+}
+.sitemap-button i {
+  color: #A5A5A5;
+  padding-top: 22px;
+  margin-right: 40px;
+}
+.cart {
+  position: absolute;
+  top: 0px;
+  right: 75px;
+  display: none;
+}
+.cart a {
+  color: #A5A5A5;
+}
+.cart a i {
+  padding-top: 22px;
+  margin-right: 50px;
+}
+.cart a .badge {
+  position: relative;
+  right: 55px;
+  bottom: 15px;
+  background: #000021;
+  color: #ac862d;
+  border: 1px solid #ac862d;
+  border-radius: 20px;
+  font-size: 50%;
+}
+.contact-social {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.contact-social a {
+  color: #A5A5A5;
+}
+.contact-social a i {
+  padding-top: 22px;
+  margin-right: 15px;
+}
+.hide {
+  display: none;
+}
+@media (max-height: 575px) {
+  .main .products-only .product {
+    min-height: 135vh;
+  }
+}
+@media (max-width: 575px) {
+  .main .other-pages .info-page {
+    padding-bottom: 35px;
+  }
+  .main .products-only .product .close-product {
+    top: 0px;
+  }
+  .main .products-only .product .row {
+    margin-right: 0px;
+  }
+  .main .products-only .product .row .product-image {
+    height: auto;
+  }
+  .main .products-only .product .row .product-image .product-thumbnail {
+    display: none;
+  }
+  .main .products-only .product .row .product-text {
+    padding-left: 35px;
+    padding-right: 15px;
+  }
+  .main .products-only .product .row .product-text .button-wrapper {
+    position: relative;
+    padding-bottom: 70px;
+    right: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .main .products-only .product .product-text {
+    margin-top: 45px;
+  }
+  .main .products-only .product .product-text h2 {
+    font-size: 30px;
+  }
+  .main .gallery-full .left {
+    opacity: 0.5;
+  }
+  .main .gallery-full .right {
+    opacity: 0.5;
+  }
+}
+@media (max-width: 576px) {
+  .main #photo div img.entitled-main-brand {
+    width: 200px;
+    top: 25px;
+  }
+  .main .gallery-full .left {
+    top: 45vh;
+    opacity: 0.6;
+  }
+  .main .gallery-full .right {
+    opacity: 0.6;
+  }
+}
+@media (max-width: 640px) {
+  .main .gallery .product {
+    width: 100vw;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .main .gallery .product .product-image {
+    margin-left: 0px;
+    margin-top: 8vh;
+    height: 50vh;
+  }
+  .main .gallery .product .product-thumbnail {
+    display: none;
+  }
+  .main .gallery .product .product-text {
+    margin-top: 15px;
+  }
+  .main .gallery .product .product-text .button-wrapper {
+    position: relative;
+  }
+  .pages .sitemap .all-wrapper .logo img {
+    height: 10vh;
+  }
+  .pages .sitemap .all-wrapper .products {
+    padding-top: 30px;
+  }
+}

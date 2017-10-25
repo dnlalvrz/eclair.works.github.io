@@ -1,0 +1,697 @@
+// Stylus Variables for easy colours
+nttldgold = rgb(172,134,45)
+nttldrichblue = rgb(0,0,33)
+nttldrichblueOpaque = rgba(0,0,33,0.0)
+
+body
+	background rgb(0,0,33) 
+	// background rgb(254,254,254)
+	// background-image url("../images/background-repeat-web.jpg")
+	font-family 'Lato', sans-serif
+	font-size 24px
+	color nttldgold
+	letter-spacing -0.2px
+.main
+	padding 0px
+	overflow auto
+	#photo
+		margin 0px
+		div
+			background-image url('https://s3.ca-central-1.amazonaws.com/nttld.ltd/cdn/images/8.jpg')
+			width 100vw
+			height 100vh
+			background-size cover
+			padding 0px
+			.photogcredit
+				color nttldgold
+				height 100px
+				font-size 12px
+				padding-top 8px
+				padding-left 21px
+				opacity 0.4
+				background none
+				transition opacity 0.5s ease-in-out
+				&:hover
+					opacity 1
+					transition opacity 0.5s ease-in-out
+				a
+					color nttldgold
+			img
+				position absolute
+				top 10px
+				right 25px
+				opacity 0
+				width 500px
+				transition opacity 0.5s ease-in-out
+				&:hover
+					opacity 1
+					transition opacity 0.5s ease-in-out
+			i
+				position absolute
+				bottom 80px
+				left 35px
+				opacity 0.2
+				transition opacity 0.3s
+				&:hover
+					opacity 1
+					transition opacity 0.3s
+	.products-only, .other-pages
+		background-image none
+		background-color
+		.center-product, .center-page		
+			position absolute
+			opacity 0
+			left 0
+			top 100vh
+			min-height 100vh
+			width 100vw
+			background-color rgba(254,254,254,0.92)
+			z-index 10
+			overflow scroll
+			transition 0.6s top ease-in-out, 0.3s opacity linear
+		// This very next line should be removed in the final site
+		.center-product, .center-page
+			.close-product, .close-page
+				display block
+				position absolute
+				width 30px
+				top 10px
+				right 10px
+				z-index 5
+				i
+					color nttldgold
+			.product-image
+				width 100%
+				height 80vh
+				margin-top 35px
+				padding-left 35px
+				// margin-right 5vh
+				object-fit cover
+				.product-image-main
+					position relative
+					img
+						width 100%
+				.product-thumbnail
+					position right
+					margin-top 10px
+					height 10vh
+					overflow hidden
+					img
+						width 100%
+						height 100%
+				.thumb1
+					img
+						object-fit none
+						object-position 49% 40%
+				.thumb2
+					img
+						object-fit none
+						object-position 66% 57%
+				.thumb3
+					img
+						object-fit none
+						object-position 27% 18%
+			.product-text, .text
+				margin-top 35px
+				padding-right 40px
+				.product-style-band
+					// width 100%
+					height 75px
+					// margin-right 25px
+					background-color nttldrichblue
+					margin-bottom 10px
+					overflow hidden
+					// .style-band
+					// 	background-color nttldrichblue
+					img
+						width 100%
+						height 100%
+						object-fit none
+						object-position 50% 25%
+				h2
+					font-weight 200
+					text-transform uppercase
+					margin-bottom 10px
+				p
+					font-weight 400
+					font-size 14px
+					color nttldrichblue
+					a
+						display inline
+						color nttldrichblue
+						border none
+						padding 0px
+						margin 0px
+				h3
+					font-size 20px
+					font-weight 300	
+				ul
+					padding-left 20px
+					li
+						font-size 14px
+				.button-wrapper
+					position absolute
+					bottom 0px
+					right 35px
+					button
+						width 100%
+						text-align right
+						border none
+						background none
+						position relative
+						bottom 3px
+						color nttldgold
+						font-weight 200
+						background none
+						font-size 16px
+						outline none
+						border none
+						padding-left 3px
+						padding-bottom 5px
+						padding-right 0px
+						padding-top 3px
+						font-family 'Lato', sans-serif
+						i
+							display inline
+							opacity 0
+							transition 0.3s opacity
+						h3
+							display inline
+							font-size 20px
+							font-weight 200
+							text-align right
+							padding-bottom 0px
+							margin-bottom 2px
+							color nttldgold
+							transition 0.3s color
+						&:hover
+						&:focus
+						&:active
+						&:visited
+							background none
+							outline none
+							box-shadow none
+							h3
+								color nttldrichblue
+								transition 0.3s color
+							i
+								opacity 1
+								color nttldgold
+								transition 0.3s opacity
+			.row
+				margin-right 0px
+				.text
+					padding-left 50px
+					margin-top 75px
+					padding-bottom 80px
+					.text-header
+						height 100px
+						width 100%
+						margin-bottom 50px
+						img
+							height 100%
+							width 100%
+							object-fit none
+							object-position 50% 50%	
+					.text-footer
+						height 100px
+						width 100%
+						margin-top 50px
+						img
+							height 100%
+							width 100%
+							object-fit none
+							object-position 90% 70%	
+					h2
+						margin-bottom 40px
+					ol
+						font-size 18px
+						font-weight 200
+						li
+							margin-bottom 20px
+						:last-child
+							margin-bottom 0px
+					a
+						display inline
+						color nttldrichblue
+						border none
+						padding 0px
+						margin 0px	
+					h3
+						margin-bottom 20px
+						font-weight 200
+						
+					.sizing
+						width 100%
+						margin-bottom 20px
+		.center-in
+			top 0vh
+			opacity 1
+			transition 0.6s top ease-in-out, 0.3s opacity linear		
+
+	// Gallery Sections
+	.gallery-full, .gallery-single, .gallery-half
+		margin 0
+		position relative
+		// overflow hidden
+		.next-button
+			position absolute
+			left 49vw
+			bottom 90px
+			opacity 0.3
+			transition opacity 0.3s
+			z-index 2
+			&:hover
+				opacity 1
+				transition opacity 0.3s
+		.left
+			position absolute
+			bottom 50vh
+			left 35px
+			opacity 0.2
+			transition opacity 0.3s
+			z-index 2
+			&:hover
+				opacity 1
+				transition opacity 0.3s
+		.right
+			position absolute
+			bottom 50vh
+			right 35px
+			opacity 0.3
+			transition opacity 0.3s
+			z-index 2
+			&:hover
+				opacity 1
+				transition opacity 0.3s
+		div
+			padding 0
+			position relative
+			overflow hidden
+			.photogcredit
+				position absolute
+				top 0px
+				left 10px
+				color nttldgold
+				height 100px
+				font-size 12px
+				padding-top 8px
+				opacity 0.4
+				background none
+				transition opacity 0.5s ease-in-out
+				&:hover
+					opacity 1
+					transition opacity 0.5s ease-in-out
+				a
+					color nttldgold
+			img
+				width 100%
+				height 100vh
+				object-fit cover
+		// Product Panel Sections
+		.left-product
+			position absolute
+			opacity 0
+			right 100vw
+			height 100vh
+			width 100vw
+			background-color rgba(254,254,254,0.92)
+			z-index 10
+			transition 0.6s right ease-in-out, 0.3s opacity ease-in-out
+		.right-product
+			position absolute
+			opacity 0
+			left 100vw
+			height 100vh
+			width 100vw
+			background-color rgba(254,254,254,0.92)
+			z-index 10
+			transition 0.6s left ease-in-out, 0.3s opacity linear
+		.center-product		
+			position absolute
+			opacity 0
+			left 0
+			top 100vh
+			min-height 100vh
+			width 100vw
+			background-color rgba(254,254,254,0.92)
+			z-index 10
+			overflow scroll
+			transition 0.6s top ease-in-out, 0.3s opacity linear
+		.left-product, .right-product, .center-product
+			.close-product
+				display block
+				position absolute
+				width 30px
+				top 10px
+				right 10px
+				z-index 5
+				i
+					color nttldgold
+			.product-image
+				width 100%
+				height 80vh
+				margin-top 5vh
+				margin-left 5vh
+				margin-right 5vh
+				object-fit cover
+				.product-image-main
+					position relative
+					background-color nttldrichblue
+					height 55vh
+				.product-thumbnail
+					position right
+					background-color nttldrichblue
+					margin-top 10px
+					height 10vh
+			.product-text
+				margin-top 5vh
+				.product-style-band
+					width 100%
+					height 75px
+					background-color nttldrichblue
+					margin-bottom 10px
+					.style-band
+						background-color nttldrichblue
+				h2
+					font-weight 200
+					text-transform uppercase
+					margin-bottom 10px
+				p
+					font-weight 400
+					font-size 14px
+					color nttldrichblue
+				ul
+					padding-left 20px
+					li
+						font-size 14px
+				.button-wrapper
+					position absolute
+					bottom 0px
+					right 0px
+					button
+						width 100%
+						text-align right
+						border none
+						background none
+						position relative
+						bottom 3px
+						color nttldgold
+						font-weight 200
+						background none
+						font-size 16px
+						outline none
+						border none
+						padding-left 3px
+						padding-bottom 5px
+						padding-right 0px
+						padding-top 3px
+						font-family 'Lato', sans-serif
+						i
+							display inline
+							opacity 0
+							transition 0.3s opacity
+						h3
+							display inline
+							font-size 20px
+							font-weight 200
+							text-align right
+							padding-bottom 0px
+							margin-bottom 2px
+							color nttldgold
+							transition 0.3s color
+						&:hover
+						&:focus
+						&:active
+						&:visited
+							background none
+							outline none
+							box-shadow none
+							h3
+								color nttldrichblue
+								transition 0.3s color
+							i
+								opacity 1
+								color nttldgold
+								transition 0.3s opacity
+		.left-in
+			right 0vw
+			opacity 1
+			transition 0.6s right ease-in-out, 0.3s opacity ease-in-out
+		.right-in
+			left 0vw
+			opacity 1
+			transition 0.6s left ease-in-out, 0.3s opacity linear
+		.center-in
+			top 0vh
+			opacity 1
+			transition 0.6s top ease-in-out, 0.3s opacity linear
+	.gallery-half
+		div
+			img
+				height 50vh
+	.gallery-half
+		.left
+			position absolute
+			bottom 25vh
+			left 35px
+			opacity 0.2
+			transition opacity 0.3s
+			z-index 2
+			&:hover
+				opacity 1
+				transition opacity 0.3s
+		.right
+			position absolute
+			bottom 25vh
+			right 35px
+			opacity 0.3
+			transition opacity 0.3s
+			z-index 2
+			&:hover
+				opacity 1
+				transition opacity 0.3s
+.product-form
+	margin-top 20px
+	font-size 18px
+	float right
+	font-weight 200
+	label
+		padding-right 10px
+	button
+		color nttldgold
+		background-color nttldrichblue
+		outline none
+		border none
+		&:hover, &:focus, &:active
+			color nttldrichblue
+			background-color nttldgold
+			outline none
+			
+.pages
+	z-index 5
+	.logo
+		display inline-block
+		padding-top 0px
+		width 140px	
+		margin-left 10px
+		img
+			height 70px
+			opacity 0.9
+	.sitemap
+		position fixed
+		opacity 0
+		top 100vh
+		left 0px
+		width 100vw
+		height 100vh
+		background-color white
+		transition 0.5s top ease-in-out, 0.5s opacity ease-in-out;
+		.all-wrapper
+			height 90vh
+			overflow-y auto
+			.close-sitemap
+				position absolute
+				top 10px
+				right 20px
+			.logo
+				padding-right 0px
+				padding-left 35px
+				padding-top 35px
+				margin-right 0px
+				div
+					padding 0px
+			.products
+				padding 35px
+				margin-left 0px
+				margin-right 0px
+				h2
+					text-transform uppercase
+					font-weight 300
+					padding-bottom 15px
+					border-bottom 1px solid nttldgold
+					font-size 20px
+				ul
+					padding-left 0px
+					li
+						list-style none
+						font-weight 300
+						font-size 16px
+						transition 0.3s color ease-in-out
+						&:hover
+							color nttldrichblue
+						transition 0.3s color ease-in-out
+		.boring-page
+			height 100vh
+			width 100vw
+			background-color nttldgold
+	.show-them
+		top 0vh
+		opacity 1
+		transition 0.5s top ease-in-out, 0.5s opacity ease-in-out;
+			
+footer
+	border-top 1px solid nttldgold
+	height 70px
+	width 100%
+	position fixed
+	bottom 0px
+	z-index 20
+	transition 1.2s 
+	background-color rgba(0,0,0,0)
+.sitemap
+	background-color white
+	border-top none
+	transition 1.2s
+.logo
+	display inline-block
+	padding-top 0px
+	width 140px	
+	margin-left 10px
+	img
+		height 70px
+		opacity 0.9
+.sitemap-button
+	position absolute
+	top 0px
+	right 50px
+	i
+		color nttldgold
+		padding-top 22px
+		margin-right 0px
+.cart
+	position absolute
+	top 0px
+	right 75px
+	display none
+	a
+		color nttldgold
+		i
+			padding-top 22px
+			margin-right 0px
+		.badge
+			position relative
+			right 5px
+			bottom 15px
+			background nttldrichblue
+			color nttldgold
+			border 1px solid nttldgold
+			border-radius 20px
+			font-size 50%	
+.contact-social
+	position absolute
+	top 0px
+	right 0px
+	a
+		color nttldgold
+		i
+			padding-top 22px
+			margin-right 15px
+
+.hide
+	display none
+// @media (min-width: 769px)
+
+@media (max-height: 575px)
+	.main .products-only .product
+		min-height 135vh
+@media (max-width: 575px)
+	.main .other-pages .info-page
+		padding-bottom 35px
+	.main .products-only .product
+		.close-product
+			top 0px
+		.row
+			margin-right 0px
+			.product-image
+				height auto
+				.product-thumbnail
+					display none
+			.product-text
+				padding-left 35px
+				padding-right 15px
+				.button-wrapper
+					position relative
+					padding-bottom 70px
+					right 0px
+
+@media (max-width: 768px)
+	.main .products-only .product
+		.product-text
+			margin-top 45px
+			h2
+				font-size 30px
+	.main .gallery-full
+		.left
+			opacity 0.5
+		.right
+			opacity 0.5
+
+@media (max-width: 576px)
+	.main #photo div img.entitled-main-brand
+		width 200px
+		top 25px
+	
+	.main .gallery-full 
+		.left
+			top 45vh
+			opacity 0.6
+		.right
+			opacity 0.6
+		// .product
+		// 	height 150vh
+			
+
+@media (max-width: 640px)
+	.main .gallery .product
+		width 100vw
+		padding-left 35px
+		padding-right 35px
+		.product-image
+				margin-left 0px
+				margin-top 8vh
+				height 50vh
+			.product-thumbnail
+				display none
+		.product-text
+			margin-top 15px
+			.button-wrapper
+				position relative
+			
+	.pages .sitemap .all-wrapper .logo img
+			height 10vh
+	.pages .sitemap .all-wrapper
+		.products
+			padding-top 30px
+				
+
+
+
+
+
+
+
+
+
+
+
